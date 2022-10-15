@@ -2,5 +2,5 @@
 
 ## Goal
 - Create a Controlled Form
-- prova
-- prova 2
+- Use <input> and <select> form controls
+- Create a dynamic onChangeHandler to handle several form controls
