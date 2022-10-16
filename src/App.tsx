@@ -23,6 +23,12 @@ function App() {
   };
 
   // UPDATED) ChangeHandler now updates both, 'username' or 'job' state properties
+  // Questo è fenomeno dell'object merge
+  //Semplicemente FormData é uno stato. Con setFormData puoi definire un nuovo stato. 
+  // In questo caso gli viene detto: nel nuovo stato, metti tutto quello che c'era nello stato precedente , 
+  // più un oggetto chiave-valore definito con la chiave (l'attributo "name" del nostro input) e come valore il valore corrente del nostro input.
+  // L'unica cosa che devi considerare, (questo è JavaScript però), é che nel caso in cui la chiave dell'oggetto che vuoi inserire è già presente nello stato precedente,
+  // il suo valore verrà sostituito dal valore nuovo, altrimenti se così non è, avrai l'aggiunta di un nuovo attribuito chiave-valore
   const onChangeHandler = (e: React.FormEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({
       // copy all values from the previous form state
